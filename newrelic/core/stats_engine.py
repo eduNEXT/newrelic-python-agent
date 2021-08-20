@@ -1398,6 +1398,7 @@ class StatsEngine(object):
 
     def reset_span_events(self):
         if self.__settings is not None:
+            _logger.info("TESTING - Span Event Harvest Limit: %d" % self.__settings.event_harvest_config.harvest_limits.span_event_data)
             self._span_events = SampledDataSet(
                     self.__settings.event_harvest_config.
                     harvest_limits.span_event_data)

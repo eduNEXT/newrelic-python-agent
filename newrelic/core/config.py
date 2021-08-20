@@ -711,8 +711,7 @@ _settings.event_harvest_config.harvest_limits.analytic_event_data = \
         DEFAULT_RESERVOIR_SIZE
 _settings.event_harvest_config.harvest_limits.custom_event_data = \
         DEFAULT_RESERVOIR_SIZE
-_settings.event_harvest_config.harvest_limits.span_event_data = \
-        SPAN_EVENT_RESERVOIR_SIZE
+_settings.event_harvest_config.harvest_limits.span_event_data = _environ_as_int('NEW_RELIC_SPAN_RESERVOIR', SPAN_EVENT_RESERVOIR_SIZE)
 _settings.event_harvest_config.harvest_limits.error_event_data = \
         ERROR_EVENT_RESERVOIR_SIZE
 
